@@ -29,37 +29,54 @@ class PagesController extends AppController
 {
 
     /**
-     * Displays a view
+     * beforeFilter callback
      *
-     * @return void|\Cake\Network\Response
-     * @throws \Cake\Network\Exception\NotFoundException When the view file could not
-     *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
+     * @param
+     * @return void
      */
-    public function display()
+    public function beforeFilter(\Cake\Event\Event $event)
     {
-        $path = func_get_args();
+        parent::beforeFilter($event);
 
-        $count = count($path);
-        if (!$count) {
-            return $this->redirect('/');
-        }
-        $page = $subpage = null;
-
-        if (!empty($path[0])) {
-            $page = $path[0];
-        }
-        if (!empty($path[1])) {
-            $subpage = $path[1];
-        }
-        $this->set(compact('page', 'subpage'));
-
-        try {
-            $this->render(implode('/', $path));
-        } catch (MissingTemplateException $e) {
-            if (Configure::read('debug')) {
-                throw $e;
-            }
-            throw new NotFoundException();
-        }
+        $this->layout = 'public';
+        $this->loadModel('Posts');
     }
+
+    /**
+     * about method
+     *
+     * @return void
+     */
+    public function about()
+    {
+
+    }
+
+    /**
+     * index method
+     *
+     * @return void
+     */
+    public function index()
+    {
+        $this->set('posts', $this->paginate($this->Posts));        
+    }
+
+    /**
+     * view method
+     *
+     * @return void
+     */
+    public function view() {
+        $post = $this->Posts->find('all', [
+            'conditions' => [
+                'Posts.slug' => $this->request->params['slug']
+            ],
+            'limit' => 1
+        ])->all()->first();
+
+        $this->set('post', $post);
+        $this->set('title_for_layout', $post->title);
+    }    
+
 }
