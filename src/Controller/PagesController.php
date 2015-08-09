@@ -28,6 +28,14 @@ use Cake\View\Exception\MissingTemplateException;
 class PagesController extends AppController
 {
 
+
+    public $paginate = [
+        'limit' => 10,
+        'order' => [
+            'Posts.id' => 'DESC'
+        ]
+    ];
+
     /**
      * beforeFilter callback
      *
@@ -60,7 +68,7 @@ class PagesController extends AppController
      */
     public function index()
     {
-        $this->set('posts', $this->paginate($this->Posts, ['order' => 'Posts.id DESC']));        
+        $this->set('posts', $this->paginate($this->Posts));        
     }
 
     /**
