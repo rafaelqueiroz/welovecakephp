@@ -60,7 +60,7 @@ class PagesController extends AppController
      */
     public function index()
     {
-        $this->set('posts', $this->paginate($this->Posts));        
+        $this->set('posts', $this->paginate($this->Posts, ['order' => 'Posts.id DESC']));        
     }
 
     /**
