@@ -11,12 +11,6 @@ use App\Controller\AppController;
 class UsersController extends AppController
 {
 
-    public function beforeFilter(\Cake\Event\Event $event)
-    {
-        parent::beforeFilter($event);
-        $this->Auth->allow('add');
-    }
-
     public function login()
     {
         if ($this->request->is('post')) {
