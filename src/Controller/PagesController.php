@@ -40,6 +40,7 @@ class PagesController extends AppController
 
         $this->layout = 'public';
         $this->loadModel('Posts');
+        $this->Auth->allow();
     }
 
     /**
