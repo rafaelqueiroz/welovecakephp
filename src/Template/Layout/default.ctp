@@ -32,6 +32,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+    <script src="//cdn.ckeditor.com/4.5.2/standard/ckeditor.js"></script>
 </head>
 <body>
     <header>
