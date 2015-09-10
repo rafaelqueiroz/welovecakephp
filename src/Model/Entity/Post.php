@@ -2,6 +2,7 @@
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use Cake\Utility\Hash;
 
 /**
  * Post Entity.
@@ -18,4 +19,13 @@ class Post extends Entity
         '*' => true,
         'id' => false,
     ];
+
+    public function _getListTags() {
+    	$list = [];
+    	foreach ($this->tags as $tag) {
+    		$list[] = $tag->title;
+    	}
+    	return implode(', ', $list);
+    }
+
 }

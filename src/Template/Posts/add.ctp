@@ -15,6 +15,9 @@
             echo $this->Form->input('slug');
             echo $this->Form->input('summary');
             echo $this->Form->input('body');
+            echo $this->Form->input('progress');
+            echo $this->Form->input('active');
+            echo $this->Form->input('published');            
             echo $this->Form->input('tags._ids', ['options' => $tags]);
         ?>
     </fieldset>

@@ -33,6 +33,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
     <script src="//cdn.ckeditor.com/4.5.2/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('summary');
+        CKEDITOR.replace('body');
+    </script>
 </head>
 <body>
     <header>
@@ -45,10 +49,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div>
     </header>
     <div id="container">
-
         <div id="content">
             <?= $this->Flash->render() ?>
-
             <div class="row">
                 <?= $this->fetch('content') ?>
             </div>

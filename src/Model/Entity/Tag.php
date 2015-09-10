@@ -18,4 +18,5 @@ class Tag extends Entity
         '*' => true,
         'id' => false,
     ];
+
 }
