@@ -17,6 +17,7 @@ namespace App\Controller;
 use Cake\Core\Configure;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
+use Cake\Utility\Text;
 
 /**
  * Static content controller
@@ -68,7 +69,8 @@ class PagesController extends AppController
      */
     public function index()
     {
-        $this->set('posts', $this->paginate($this->Posts));        
+        $posts = $this->Posts->find('all', ['conditions' => ['Posts.active' => true], 'contain' => ['Tags'], 'order' => ['Posts.published DESC']])->all();
+        $this->set('posts', $posts);        
     }
 
     /**
@@ -79,13 +81,25 @@ class PagesController extends AppController
     public function view() {
         $post = $this->Posts->find('all', [
             'conditions' => [
-                'Posts.slug' => $this->request->params['slug']
+                'Posts.slug' => $this->request->params['slug'],
+                'Posts.active' => true
             ],
-            'limit' => 1
+            'contain' => ['Tags'],
+            'limit' => 1,
         ])->all()->first();
 
         $this->set('post', $post);
         $this->set('title_for_layout', $post->title);
     }    
+
+    /**
+     * training method
+     *
+     * @return void
+     */
+    public function training() {
+        $code = !empty ($this->request->query['code']) ? $this->request->query['code'] : "C11140A91212F0C884FD3FAA05768CCE";
+        $this->set('code', $code);
+    }
 
 }

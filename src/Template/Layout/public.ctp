@@ -29,13 +29,13 @@
                 </div>
                 <nav id="nav-top" class="nav-top">
                     <ul>
-                        <li><a href="<?php echo $this->Url->build(array('action' => 'index'));?>">Home</a></li>
+                        <li><a href="<?= $this->Url->build(array('action' => 'index'));?>">Home</a></li>
                     </ul>
                     <h1 class="logo-primary">
                         <?php echo $this->Html->image('logo.png');?>
                     </h1>
                     <div class="logo-secondary">
-                        <?php echo $this->Html->image('logo.png');?>
+                        <?php echo $this->Html->image('logo.png', ['width' => 80, 'height' => 80]);?>
                     </div>
                     <ul>
                         <li><a href="<?php echo $this->Url->build(array('action' => 'about'));?>">Sobre</a></li>
@@ -45,12 +45,53 @@
         </header>        
         <section class="top-section">
             <div class="offset-borders">
+                <?php if ($this->view !== 'training') { ?>
+                <div id="header-course" class="full-header-container">
+                    <div class="full-header">
+                        <div class="container">
+                            <a href="<?= $this->Url->build(array('action' => 'training'));?>">
+                                <h1>CakePHP 3</h1>
+                            </a>
+                            <h3>Este curso permitirá se atualizar e ficar à frente da concorrência</h3>
+                            <h3>27 Set - Boa Viagem, Recife - PE</h3>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
             </div>
         </section>
         <?php echo $this->fetch('content');?>
         <footer class="page-footer">
             <div class="footer-dark">
                 <div class="container">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-sm-6 footer-column onscroll-animate">
+                                <h4>Working Time</h4>
+                                <div class="margin-40"></div>
+                            </div>
+                            <div class="col-sm-6 footer-column onscroll-animate" data-delay="300">
+                                <h4>Happy Hours</h4>
+                                <div class="margin-40"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-sm-6 footer-column onscroll-animate" data-delay="400">
+                            </div>
+                            <div class="col-sm-6 footer-column onscroll-animate" data-delay="500">
+                                <h4>Contato</h4>
+                                <div class="icon-opening-wrapper">
+                                    <div class="icon-opening-container">
+                                        <p class="icon-opening"><i class="fa fa-envelope"></i></p>
+                                        <p class="icon-opening-content">rafaelfqf@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="margin-40"></div>
+                            </div>
+                        </div>
+                    </div>
                     <p class="site-info"><?php echo date('Y');?> All rights reserved.</p>
                 </div>
             </div>
