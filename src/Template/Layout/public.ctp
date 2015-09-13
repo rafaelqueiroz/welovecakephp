@@ -53,7 +53,7 @@
                                 <h1>CakePHP 3</h1>
                             </a>
                             <h3>Este curso permitirá se atualizar e ficar à frente da concorrência</h3>
-                            <h3>27 Set - Boa Viagem, Recife - PE</h3>
+                            <h3>25 Set - Boa Viagem, Recife - PE</h3>
                         </div>
                     </div>
                 </div>
