@@ -10,8 +10,11 @@
                         <span class="price-label-content">R$299,90</span>
                     </div>
                     <h1>CakePHP 3</h1>
-					<h2>25 Setembro - 14:00</h2>
-					<h3>Boa Viagem, Recife - PE</h3>
+					<h2>Boa Viagem, Recife - PE</h2>
+                    <span class="highlight">
+                        25 Setembro<br />
+                        9:00 am - 5:00 pm
+                    </span>
                 </div>
                 <div class="margin-20"></div>
                 <p>O curso e destinado para desenvolvedores do framework, ou que tenham conhecimento de desenvolvimento de aplicacoes MVC.</p>
@@ -39,7 +42,7 @@
                     </div>                
                     <div class="col-xs-6">    
                     	<h2>Data / Local</h2>
-                    	<div class="item-check">27 de Set de 2015 - 14:00</div>
+                    	<div class="item-check">25 Setembro - 09:00</div>
                     	<div class="item-check">
                     		<a href="https://goo.gl/maps/v6iCq" target="_blank">Boa Viagem, Recife - PE</a>
                     	</div>

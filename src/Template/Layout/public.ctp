@@ -62,16 +62,17 @@
         </section>
         <?php echo $this->fetch('content');?>
         <footer class="page-footer">
-            <div class="footer-dark">
+            <div class="footer-dark">                
                 <div class="container">
                     <div class="col-md-6">
                         <div class="row">
-                            <div class="col-sm-6 footer-column onscroll-animate">
-                                <h4>Working Time</h4>
-                                <div class="margin-40"></div>
-                            </div>
                             <div class="col-sm-6 footer-column onscroll-animate" data-delay="300">
-                                <h4>Happy Hours</h4>
+                                <h4>Treinamento</h4>
+                                <p>
+                                    CakePHP 3<br>
+                                    Boa Viagem, Recife - PE<br>
+                                    <span class="highlight">25 Setembro, 9:00 am - 5:00 pm</span>
+                                </p>
                                 <div class="margin-40"></div>
                             </div>
                         </div>
@@ -82,6 +83,7 @@
                             </div>
                             <div class="col-sm-6 footer-column onscroll-animate" data-delay="500">
                                 <h4>Contato</h4>
+                                <p>Segunda Sexta: <span class="highlight">12:00 pm - 4:00 pm</span><br></p>
                                 <div class="icon-opening-wrapper">
                                     <div class="icon-opening-container">
                                         <p class="icon-opening"><i class="fa fa-envelope"></i></p>
@@ -92,7 +94,6 @@
                             </div>
                         </div>
                     </div>
-                    <p class="site-info"><?php echo date('Y');?> All rights reserved.</p>
                 </div>
             </div>
         </footer>
