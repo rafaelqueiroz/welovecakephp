@@ -15,6 +15,7 @@ Router::defaultRouteClass('Route');
 
 Router::scope('/', function ($routes) {
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'index']);
+    $routes->connect('/training', ['controller' => 'Pages', 'action' => 'training']);
     $routes->connect('/:slug', ['controller' => 'Pages', 'action' => 'view'], ['routeClass' => 'SlugRoute']);
 
     $routes->fallbacks('InflectedRoute');
