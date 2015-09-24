@@ -12,7 +12,7 @@
                     <h1>CakePHP 3</h1>
 					<h2>Boa Viagem, Recife - PE</h2>
                     <span class="highlight">
-                        17 Setembro<br />
+                        17 Outubro<br />
                         9:00 am - 5:00 pm
                     </span>
                 </div>
