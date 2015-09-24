@@ -42,7 +42,7 @@
                     </div>                
                     <div class="col-xs-6">    
                     	<h2>Data / Local</h2>
-                    	<div class="item-check">25 Setembro - 09:00</div>
+                    	<div class="item-check">17 Outubro - 09:00</div>
                     	<div class="item-check">
                     		<a href="https://goo.gl/maps/v6iCq" target="_blank">Boa Viagem, Recife - PE</a>
                     	</div>
